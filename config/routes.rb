@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root "static_pages#home"
   get "/help", to: "static_pages#help"
+  resources :account_activations, only: [:edit]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
