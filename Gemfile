@@ -6,6 +6,7 @@ gem 'rails', '6.0.1'
 gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails'
+gem 'bootstrap-sass'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
 # Use CoffeeScript for .coffee assets and views
