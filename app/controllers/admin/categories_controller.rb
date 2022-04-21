@@ -13,7 +13,7 @@ class Admin::CategoriesController < ApplicationController
   end
   
   def new 
-    @category = Catagory.new
+    @category = Category.new
   end
 
   def create
@@ -35,10 +35,18 @@ class Admin::CategoriesController < ApplicationController
     end
   end
 
+  def destroy
+    if @category.destroy
+      flash[:success] = "Delete succesfully"
+      redirect_to admin_categories_path
+    end
+  end
+
+
   private 
   def set_category
     @category = Category.find_by_id(params[:id])
-    if @category 
+    if !@category 
       flash[:info] = "Không tìm thấy thông tin sản phẩm"
       redirect_to admin_categories_path   
     end
