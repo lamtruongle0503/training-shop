@@ -3,6 +3,8 @@ class Product < ActiveRecord::Base
   has_many :comments, as: :commentable, dependent: :destroy
   has_many :category_products, dependent: :destroy
   has_many :categories, through: :category_products
+  has_many :order_details
+  has_many :orders, through: :order_details
 
   validates :code, presence: true
   validates :name, presence: true
@@ -13,9 +15,7 @@ class Product < ActiveRecord::Base
   scope :ordered_by_name, -> { order(name: :desc) }
   scope :ordered_by_price, -> { order(name: :desc) }
   scope :search_name, ->(name) { where("name LIKE ?", "%#{name}%") if name.present? }
-  scope :search_category, ->(category_ids) { where(category_ids: category_ids) if category_ids.present? }
   scope :search_product, lambda { |params|
     search_name(params[:name])
-      .search_category(params[:category_ids])
   }
 end

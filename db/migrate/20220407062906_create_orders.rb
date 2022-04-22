@@ -3,7 +3,8 @@ class CreateOrders < ActiveRecord::Migration[6.0]
     create_table :orders do |t|
       t.references :user, foreign_key: true
       t.references :payment_method, foreign_key: true
-      t.integer :status
+      t.integer :status ,default: 1
+      t.float :sub_total
 
       t.timestamps
     end
