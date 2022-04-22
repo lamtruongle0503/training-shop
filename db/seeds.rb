@@ -1,3 +1,7 @@
+Category.create!(name: "Quan")
+Category.create!(name: "Ao")
+Category.create!(name: "Giay")
+Category.create!(name: "Dep")
 99.times do |n|
     name = Faker::Name.name
     code = "#{n+1}"
@@ -26,3 +30,4 @@ end
       activated: true,
       activated_at: Time.zone.now)
 end
+
