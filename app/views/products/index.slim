@@ -3,7 +3,7 @@ h1 Store Categories
 = render 'products/form'
 - if !@products.empty?
   .all_products
-    = render @products
+    = render @products, product: @product, order_item: @order_item 
 - else 
   p There is no suitable product
 .paginate 

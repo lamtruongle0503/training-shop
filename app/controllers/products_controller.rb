@@ -4,6 +4,7 @@ class ProductsController < ApplicationController
     @products = @q.result(distinct: true)
       .paginate(page: params[:page], per_page: 3)
       .ordered_by_price
+    @order_item = current_order.order_items.new
   end
 
   def show
