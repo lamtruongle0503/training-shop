@@ -30,7 +30,7 @@ class CartsController < ApplicationController
   private
 
   def check_empty_cart
-    if session[:cart].empty?
+    if !session[:cart]
       redirect_to root_path
       flash[:info] = "Cart is empty."
     end

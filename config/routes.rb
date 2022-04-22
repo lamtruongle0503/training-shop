@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :categories
     resources :products
+    resources :charts
   end
 
   resources :account_activations, only: %i(edit)

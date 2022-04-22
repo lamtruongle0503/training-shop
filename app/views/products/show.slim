@@ -13,5 +13,4 @@
     p = @product.price 
   .description
     p = @product.description
-  .button 
-    button Add to Cart
+  =link_to "Add to Cart", add_to_carts_path(id: @product.id, quantity: 1), method: :post, class: "btn btn-primary btn-cart"

@@ -5,7 +5,10 @@ User.create!(name: "Admin User",
              is_admin: true,
              activated: true,
              activated_at: Time.zone.now)
-
+Category.create!(name: "quan")
+Category.create!(name: "ao")
+Category.create!(name: "giay")
+Category.create!(name: "dep")
 99.times do |n|
   name = Faker::Name.name
   code = "#{n + 1}"
