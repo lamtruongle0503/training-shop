@@ -7,11 +7,22 @@ Category.create!(name: "Dep")
     code = "#{n+1}"
     price = "#{(n+1)*100}"
     description = Faker::Lorem.sentence(5)
-    if n%2 == 1
+    if n%4 == 1
       category = "1"
-    else 
-      category ="2"
     end
+
+    if n%4 == 2
+      category = "2"
+    end
+
+    if n%4 == 3
+      category = "3"
+    end
+
+    if n%4 == 0
+      category = "4" 
+    end
+       
     Product.create!(name: name,
       code: code,
       price: price,
