@@ -7,7 +7,7 @@ nav.navbar.navbar-default.navbar-static-top
       ul.nav.navbar-nav.navbar-right
         - if logged_in?
           - if current_user.is_admin?
-            li= link_to "Home", admin_path, class: "active"
+            li= link_to "Home", root_path, class: "active"
           - else
             li= link_to "Home", products_path, class: "active"
         - else
@@ -22,6 +22,7 @@ nav.navbar.navbar-default.navbar-static-top
             li= link_to "Users", admins_path
             li= link_to "Categories", admin_categories_path
             li= link_to "Products", admin_products_path
+            li= link_to "Payment method", admin_payment_methods_path
             li.dropdown
               a.dropdown-toggle data-toggle="dropdown" type="button"
                 | Dashboard
