@@ -17,6 +17,8 @@ Rails.application.routes.draw do
     resources :products
     resources :users
     resources :payment_methods
+    resources :chart_analyses
+
   end
 
   resources :account_activations, only: %i(edit)
