@@ -8,6 +8,8 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find_by_id(params[:id])
+    @comments = @products.comments.all
+    @comment = @products.comments.build
     if !@product
       flash[:info] = "Không tìm thấy thông tin sản phẩm"
       redirect_to products_path
