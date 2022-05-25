@@ -1,6 +1,7 @@
 vi:
   layouts:
     header:
+      product: "Sản phảm"
       home: "Trang chủ"
       contact: "Liên hệ"
       dashboard: "Quản lý"
@@ -9,7 +10,7 @@ vi:
       profit_statistics: "Thống kê lợi nhuận"
       shipping_analysis: "Thống kê vận chuyển"
     account:
-      cart: "Giỏ hàng"
+      cart: "Giỏ hàng "
       account: "Tài khoản"
       logout: "Đăng xuất"
       profile: "Trang cá nhân"
@@ -26,7 +27,7 @@ vi:
       order: "Đơn hàng"
       chart_analysis: "Biểu đồ phân tích"
       profit_statistics: "Thống kê lợi nhuận"
-      Chat: "Tin nhan"
+      Chat: "Tin nhắn"
     footer:
       assistant: "Hỗ trợ miễn phí"
       refund: "100% HOÀN TIỀN"
@@ -49,8 +50,15 @@ vi:
       message: "Tin nhắn"
       send: "Gửi"
       cancel: "Hủy"
+    header:
+      show_all_product: "Hiển thị tất cả các sản phẩm"
+      welcome: "Chào mừng đến với "
+      product_new: "Sản phẩm mới"
+      add_to_cart: "Thêm vào giỏ"
   password_resets:
     edit:
+      reset_password: "Đặt lại mật khẩu"
+      update_password: "Cập nhật mật khẩu"
       password: "Mật khẩu"
       password_confirmation: "Xác nhận mật khẩu"
   sessions:
@@ -64,13 +72,16 @@ vi:
     form:
       avatar: "Ảnh đại diện"
     user:
-      edit: "Chỉnh sửa | "
+      edit: "Chỉnh sửa "
     show:
       username: "Tên người dùng: "
       address: "Địa chỉ: "
+      phone: "Điện thoại: "
     new:
       sign_up: "Đăng nhập"
       create: "Tạo tài khoản"
+      do_have_an_account: "Bạn đã có tài khoản?"
+      log_in: "Đăng nhập!"
     edit:
       save: "Lưu"
       update_profile: "Cập nhật hồ sơ của bạn"
@@ -82,14 +93,15 @@ vi:
       image: "Hình ảnh"
       price: "Giá"
       quantity: "Số lượng"
-      delete: "Xóa"
+      delete: "Xóa "
       total: "Tổng"
       continue: "Tiếp tục mua sắm"
       update: "Cập nhập"
       order: "Đặt hàng"
+      info: "Thông tin"
   products:
     index:
-      category: "Danh mục"
+      product: "Sản phẩm"
       content1: "Vui lòng thêm danh mục của bạn để  "
       content2: "Không có sản phẩm phù hợp"
       add_product: "thêm sản phẩm mới"
@@ -116,7 +128,7 @@ vi:
         confirm: "Bạn có muốn xóa người dùng: "
     categories:
       category:
-        all_product: "Tất cả sản phẩm | "
+        all_product: "Tất cả sản phẩm "
       index:
         modify: "Sửa đổi"
         add_category: "thêm danh mục mới"
@@ -137,6 +149,12 @@ vi:
         new_product: "Thêm sản phẩm mới"
       edit:
         edit_product: "Chỉnh sửa sản phẩm"
+      search:
+        name_product: "Tên sản phẩm"
+    orders:
+      order:
+        customer: "Khách hàng: "
+        total: "Tổng: "
     payment_methods:
       form:
         payment_method_name: "Tên phương thức thanh toán: "
@@ -145,7 +163,7 @@ vi:
       index:
         title: "Phương thức thanh toán tại cửa hàng"
         description: "Vui lòng thêm Phương thức thanh toán vào cửa hàng của bạn"
-        add_payment_method: "thêm phương thức thanh toán mới."
+        add_payment_method: " Thêm phương thức thanh toán mới."
       new:
         title: "Phương thức thanh toán mới"
       show:
@@ -155,15 +173,23 @@ vi:
         order_chart_title: "Đơn hàng theo ngày"
         product_chart_title: "Sản phẩm theo ngày"
         order_detail_chart_title: "Chi tiết đơn hàng theo ngày"
+    rooms:
+      index:
+        list_room: "Danh sách các phòng"
+        owner: "Chủ sở hữu"
   orders:
     form:
       payment_method: "Phương thức thanh toán:"
+      name: "Tên: "
+      shipping: "Vận chuyển: "
+      total_money: "Tổng số tiền: "
     order:
       pending: "Đang chờ xử lý"
       completed: "Đã hoàn thành"
     index:
       status: "Trạng thái"
-      action: "Hanh dong"
+      unit_price: "Đơn giá"
+      action: "Hành động"
   flash:
     success:
       activated: "Tài khoản đã được kích hoạt!"
@@ -172,8 +198,9 @@ vi:
       user_deleted: "Xóa thành công!"
       profile_update: "Hồ sơ cá nhân đã cập nhật."
       product_created: "Đã tạo sản phẩm thành công."
-      update: "Updated."
-      payment_method_created: "Created payment method sucessfully."
+      update: "Cập nhật."
+      payment_method_created: "Tạo phương thức thanh toán thành công."
+      category_created: "Category was successfully created."
     info:
       empty_cart: "Giỏ hàng của bạn đang trống."
       add: "Thêm "
@@ -195,4 +222,4 @@ vi:
       login_required: "Vui lòng hãy đăng nhập."
       invalid_login: "Email / mật khẩu không hợp lệ."
       order: "Hàng đang giao không được xóa"
-      delete: "Xoa thanh cong"
+      delete: "Xóa thành công"

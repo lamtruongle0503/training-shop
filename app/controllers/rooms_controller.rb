@@ -4,23 +4,21 @@ class RoomsController < ApplicationController
   end
 
   def new
-    @room = current_user.rooms.new
+    @room = current_user.room.new
   end
 
   def show
     @room = Room.find_by id: params[:id]
-    if !current_user.is_admin?
-      if !(current_user.room.id == @room.id)
-        flash[:danger] = "Don't permit"
-        redirect_to root_url
-      else
-        @messages = @room.messages.includes(:user).order(created_at: :asc)
-      end
+    if @room.present?
+      @messages = @room.messages.includes(:user).order(created_at: :asc)
+    else 
+      flash[:danger] = "Your room isn't exist"
+      redirect_to root_path
     end
   end
 
   def create
-    @room = current_user.rooms.new room_params
+    @room = current_user.room.new room_params
 
     if @room.save
       flash[:success] = "Room is created"
